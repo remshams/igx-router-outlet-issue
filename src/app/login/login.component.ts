@@ -1,4 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { LoginService } from '../_common/login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -6,8 +8,11 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   styleUrls: ['./login.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LoginComponent implements OnInit {
-  constructor() {}
+export class LoginComponent {
+  constructor(private loginService: LoginService, private router: Router) {}
 
-  ngOnInit(): void {}
+  logIn() {
+    this.loginService.logIn();
+    this.router.navigateByUrl('/main');
+  }
 }

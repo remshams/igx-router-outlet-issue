@@ -1,4 +1,9 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ChangeDetectionStrategy,
+  OnDestroy,
+} from '@angular/core';
 
 @Component({
   selector: 'app-main',
@@ -6,8 +11,16 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   styleUrls: ['./main.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MainComponent implements OnInit {
-  constructor() {}
+export class MainComponent implements OnInit, OnDestroy {
+  constructor() {
+    console.log('constructor');
+  }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log('init');
+  }
+
+  ngOnDestroy() {
+    console.log('destroy');
+  }
 }
