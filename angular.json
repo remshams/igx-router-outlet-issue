@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "igx-reload-issue"
+    }
+  },
+  "defaultProject": "igx-reload-issue",
+  "cli": {
+    "analytics": "5c224c30-7bb5-47b3-82ac-0de0f501163a"
+  }
 }
