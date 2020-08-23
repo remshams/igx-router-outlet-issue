@@ -1,4 +1,4 @@
-<ng-container *ngIf="loginService.isLoggedIn$ | async; else login">
+<ng-container *ngIf="(loginService.isLoggedIn$ | async) && !(loginService.loginPending$ | async); else login">
   Protected
   <router-outlet></router-outlet>
 </ng-container>

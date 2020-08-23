@@ -13,6 +13,5 @@ export class LoginComponent {
 
   logIn() {
     this.loginService.logIn();
-    this.router.navigateByUrl('/main');
   }
 }
